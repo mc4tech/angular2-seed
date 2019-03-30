@@ -1,8 +1,11 @@
-<div class="container">
+<div
+  class="container has-error"
+  [class.has-error]="firstName.invalid && firstName.touched"
+>
   <h3>Angular 4 formst</h3>
   <form #form="ngForm" novalidate>
     <div class="form-group">
-      <label>First Name</label>
+      <label class="control-label">First Name</label>
       <input
         #firstName="ngModel"
         required
